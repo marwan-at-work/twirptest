@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"net/http"
 
-	"marwan.io/twirptest/protoold"
+	"marwan.io/twirptest/twirp8"
 )
 
 func main() {
-	c := protoold.NewHaberdasherProtobufClient("http://localhost:5959", http.DefaultClient)
-	resp, err := c.MakeHat(context.Background(), &protoold.Size{
+	c := twirp8.NewHaberdasherProtobufClient("http://localhost:5959", http.DefaultClient)
+	resp, err := c.MakeHat(context.Background(), &twirp8.Size{
 		Inches: 456,
 	})
 	must(err)

@@ -6,20 +6,20 @@ import (
 	"log"
 	"net/http"
 
-	"marwan.io/twirptest/protonew"
+	"marwan.io/twirptest/twirp9"
 )
 
 func main() {
-	log.Fatal(http.ListenAndServe(":5959", protonew.NewHaberdasherServer(&server{})))
+	log.Fatal(http.ListenAndServe(":5959", twirp9.NewHaberdasherServer(&server{})))
 }
 
 type server struct {
 }
 
-// MakeHat implements protonew.Haberdasher
-func (*server) MakeHat(ctx context.Context, req *protonew.Size) (*protonew.Hat, error) {
+// MakeHat implements twirp9.Haberdasher
+func (*server) MakeHat(ctx context.Context, req *twirp9.Size) (*twirp9.Hat, error) {
 	fmt.Println("GOT", req.Inches)
-	return &protonew.Hat{
+	return &twirp9.Hat{
 		Size:  123,
 		Color: "abc",
 		Name:  "qwer",

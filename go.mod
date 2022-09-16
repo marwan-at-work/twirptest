@@ -10,4 +10,4 @@ require (
 
 require github.com/pkg/errors v0.9.1 // indirect
 
-replace github.com/twitchtv/twirp/v9 => /Users/marwansulaiman/marwan/twirp
+replace github.com/twitchtv/twirp/v9 => github.com/marwan-at-work/twirp/v9 v9.0.0-20220916175944-78769c7ed31c

@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package rme;
-option go_package = "marwan.io/twirptest/protonew;protonew";
+option go_package = "marwan.io/twirptest/twirp9;twirp9";
 
 // A Hat is a piece of headwear made by a Haberdasher.
 message Hat {
